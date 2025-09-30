@@ -48,11 +48,8 @@ public:
                 if(temp->left) {
                     s1.push(temp->left);
                 }
-
-
             }
             if(!level.empty()) ans.push_back(level);
-            level.clear();
         }
         return ans;
     }
