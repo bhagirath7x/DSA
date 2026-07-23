@@ -1,15 +1,15 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
+        int i = s.size()-1;
+        int ans = 0;
 
-        stringstream ss(s);
-
-        string token;
-
-        while (ss >> token) {
-            // the last word will stored in tkn
+        while(i >=  0 && s[i] == ' ') i--;
+        while(i >= 0 && s[i] != ' ') {
+            ans++;
+            i--;
         }
 
-        return token.length();
+        return ans;
     }
 };
